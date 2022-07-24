@@ -4,9 +4,89 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>404</title>
+    <!--<link rel="icon" type="image/x-icon" href="favicon.ico"> Commented for ICON ISSUE in Browser Tab-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./EDGE APP Energy 0_files/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./EDGE APP Energy 0_files/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <style>
+
+.parent{
+            height: 98vh;
+            width: 50hz;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #a7baa7;
+        }
+        .content{
+            width: 290px;
+            height: 20pxs;
+            font-size: 150px;
+            font-family: Copperplate, Papyrus, fantasy;
+            display: flex;
+            background: #274e77;
+            color: #fff;
+            object-fit:fill; 
+            object-position: center top;
+            margin-top: -150px;
+
+        }
+        .Errorcontent{
+            position: absolute;
+            font-size: 150px;
+            font-family: Copperplate, Papyrus, fantasy;
+            height: 20vh;
+            display: flex;
+            align-items:center ;
+            background: #bd9d20;
+            color: #fff;
+            object-fit:fill;
+            object-position: center bottom;
+            margin-top: 200px;
+            
+
+        }
+        .buttonstyle{
+            position: absolute;
+            font-size: 30px;
+            font-family: Copperplate, Papyrus, fantasy;
+            height: 5vh;
+            display: flex;
+            align-items:center ;
+            background: #14b853;
+            color: #fff;
+            object-fit:fill;
+            object-position: center bottom;
+            margin-top: 350px;
+            
+        }
+        .buttonstyle:hover{
+            position: absolute;
+            font-size: 30px;
+            font-family: Copperplate, Papyrus, fantasy;
+            height: 5vh;
+            display: flex;
+            align-items:center ;
+            background: #19c192;
+            color: #fff;
+            object-fit:fill;
+            object-position: center bottom;
+            margin-top: 350px;
+        }
+    </style>
+    <script>
+        function Direct(path) {
+            window.location.href =path
+        }
+    </script>
 </head>
 <body>
-    404
+    <dev class="parent">
+        <p class="content"> 404</p>
+        <p class="Errorcontent">Error</p>
+        <input class="buttonstyle"  type="button" value="Return to the Home Page" onclick="Direct('./First.html')" >
+    </dev>
 </body>
 </html>
