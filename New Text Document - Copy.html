@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./OpenLayers.js"></script>
+
+  <style>
+
+.mapContainer
+{
+  display: inline-block;
+  width: 500px;
+  height: 500px;
+}
+
+  </style>
+</head>
+<body>
+  <div class="mapContainer">
+    
+    <div id="mapdiv"></div>
+  </div>
+
+
+  <script>
+    map = new OpenLayers.Map("mapdiv");
+    map.addLayer(new OpenLayers.Layer.OSM());
+
+    var lonLat = new OpenLayers.LonLat(31.2374534 ,30.0443833)
+          .transform(
+            new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
+            map.getProjectionObject() // to Spherical Mercator Projection
+          );
+          
+    var zoom=17;
+     var markers = new OpenLayers.Layer.Markers( "Markers" );
+     map.addLayer(markers);
+     markers.addMarker(new OpenLayers.Marker(lonLat));
+    
+
+
+    map.setCenter (lonLat, zoom);
+    function ZIN() {
+      map.zoomIn();
+    }
+    function ZOUT() {
+      map.zoomOut();
+    }
+  </script>
+  <script>
+
+  </script>
+</body>
+</html>

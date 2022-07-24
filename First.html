@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <title>GPRSP APP</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="preload stylesheet" as="style" />
+    <!--<base href="/">-->
+    <base href="." />
+    <!--<link rel="icon" type="image/x-icon" href="favicon.ico"> Commented for ICON ISSUE in Browser Tab-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./EDGE APP Energy 0_files/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./EDGE APP Energy 0_files/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <!-- <script src="./OpenLayers.js"></script> -->
+    <link rel="stylesheet" href="./EDGE APP Energy 0_files/styles.90b259253148b4f30414.css" />
+    <style>
+        body {
+            background-color: #fff;
+        }
+
+        main.container-fluid[_ngcontent-vhn-c0] {
+            width: 90%;
+        }
+
+        @media only screen and (max-width: 767px) {
+            main.container-fluid[_ngcontent-vhn-c0] {
+                width: 95%;
+                padding-right: 1px;
+                padding-left: 1px;
+            }
+        }
+    </style>
+    
+      
+    <meta property="og:site_name" content="GPRSP APP" />
+    
+    <style>
+        #Images {  
+        width: 350px;  
+        height: 350px;  
+        object-fit:fill;  
+        object-position: center top;  
+        border:5px rgb(0, 0, 0) dashed ;
+        padding: 10px;
+
+        }  
+        .disable-select {
+            -webkit-user-select: none;  
+            -moz-user-select: none;    
+            -ms-user-select: none;      
+            user-select: none;
+            }
+        
+        .Imagecontainer{
+            height: 85vh;
+            display: flex;
+            justify-content: center;
+            flex-direction:column-reverse;
+            align-items: center;
+        }
+
+        .uploadbutton{
+            margin-top: 20px;
+            width: 350px;
+            height:50PX;
+            font-size: 25PX;
+            font-weight: 600;
+            background-color: rgb(58, 233, 119);
+            color: rgb(255, 255, 255);
+            border-radius: 7px !important;
+            cursor: pointer;
+        }
+        .uploadbutton:hover{
+            margin-top: 20px;
+            width: 350px;
+            height:50PX;
+            font-size: 25PX;
+            font-weight: 600;
+            border-radius: 7px;
+            background-color: rgb(11, 161, 64);
+            
+            color: rgb(255, 255, 255);
+        } 
+        .uploadbutton:active{
+            margin-top: 20px;
+            width: 350px;
+            height:50PX;
+            font-size: 25PX;
+            font-weight: 600;
+            border-radius: 7px;
+            background-color: rgb(5, 115, 43);
+            
+            color: rgb(255, 255, 255);
+        }
+        #theFile
+        {
+            display: none;
+        }
+    </style>
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib -->
+    <style>
+        /* ---- reset ---- */
+        body {
+            margin: 0;
+            font: normal 75% Arial, Helvetica, sans-serif;
+        }
+
+        canvas {
+            display: block;
+            vertical-align: bottom;
+        }
+
+        /* ---- particles.js container ---- */
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff;
+            background-image: url("");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50% 50%;
+        }
+
+        /* ---- stats.js ---- */
+        .count-particles {
+            background: #000022;
+            position: absolute;
+            top: 48px;
+            left: 0;
+            width: 80px;
+            color: #13E8E9;
+            font-size: .8em;
+            text-align: left;
+            text-indent: 4px;
+            line-height: 14px;
+            padding-bottom: 2px;
+            font-family: Helvetica, Arial, sans-serif;
+            font-weight: bold;
+        }
+
+        .js-count-particles {
+            font-size: 1.1em;
+        }
+
+        #stats,
+        .count-particles {
+            -webkit-user-select: none;
+            margin-top: 5px;
+            margin-left: 5px;
+        }
+
+        #stats {
+            border-radius: 3px 3px 0 0;
+            overflow: hidden;
+        }
+
+        .count-particles {
+            border-radius: 0 0 3px 3px;
+        }
+    </style>
+
+<script>
+    function Browse() 
+    {
+        var x = document.getElementById("theFile")
+        x.click()
+    }
+    function fileselected()
+    {
+        DirectTo("./loading.html")
+    }
+    function DirectTo(path) 
+    {
+        window.location.href = path;
+    }
+</script>
+<script>
+</script>
+</head>
+<body>
+    <app-header _ngcontent-vhn-c0="" class="header">
+        <header>
+          <mdb-side-nav class="white" style="transform: translateX(-100%)">
+            <div id="sidenav-overlay" style="display: none; opacity: 0">
+            </div>
+          </mdb-side-nav>
+          <mdb-navbar
+            sideclass="navbar navbar-toggleable-md navbar-expand-lg scrolling-navbar double-nav p-0 ifc-header fixed-top">
+            <nav
+              class="navbar navbar-toggleable-md navbar-expand-lg scrolling-navbar double-nav p-0 ifc-header fixed-top top-nav-collapse">
+              <mdb-navbar-brand>
+                <div class="header-logo mr-auto">
+                  <a><img src="./EDGE APP Energy 0_files/header-logo-full.png" width="300px" /></a>
+                </div>
+              </mdb-navbar-brand>
+            
+              <navlinks class="ng-star-inserted">
+                <ul class="nav navbar-nav nav-flex-icons ml-auto ie-double-nav">
+                  <!---->
+                  <li
+                    class="nav-item dropdown border-right-0 border-mild-grey btn-group notificatnDropwn ActiveNotiftn px-4 pt-4"
+                    dropdown="">
+                      <!---->
+                    <div _ngcontent-vhn-c12=""
+                      class="notiDropdown dropdown-primary dropdown-menu-right rounded-0 p-0 w-300px ng-star-inserted"
+                      role="menu">
+                      <!---->
+                    </div>
+                  </li>
+                  </ifc-notification-dropdown>
+                  <!---->
+                  <li class="nav-item dropdown btn-group border-left border-mild-grey px-4 pt-4 ng-star-inserted">
+                    <a class="toggle waves-light" mdbwaveseffect="">
+                      <!----><span id="linkLoginRegister" class="ng-star-inserted">Sign In</span><span
+                        class="hide-on-ipad-portrait pl-2"></span>
+                    </a>
+                  </li>
+                  <!---->
+                </ul>
+              </navlinks>
+            </nav>
+          </mdb-navbar>
+        </header>
+      </app-header>
+      <div> 
+        <div id="particles-js" style="width: 100%; height: 100%; position:absolute; top: 60px; ">
+        </div > <!-- stats - count particles -->
+          <div class="Imagecontainer shitt disable-select " >
+            <input type="button" value="Upload Revit File"class="uploadbutton " onclick="Browse() " style="position:relative" >
+            <input type="file" class="" id="theFile" onchange="fileselected()" accept=".rvt"/>
+            <img id="Images" src="./img/upload.png" draggable="false" class="" style="position:relative" >
+        </div>
+      </div>
+    
+     <app-footer _ngcontent-vhn-c0="" class="ml-auto mr-auto" _nghost-vhn-c4="">
+        <div _ngcontent-vhn-c4="" class="footer">
+          <div _ngcontent-vhn-c4="" class="d-flex flex-column mb-5 mt-4">
+            <div _ngcontent-vhn-c4=""
+              class="d-flex flex-row mobile-column align-items-center pt-4 pb-4 mb-4 border-top border-bottom" style="border-bottom: 0px solid black !important">
+              <div _ngcontent-vhn-c4="" class="col">
+                <a _ngcontent-vhn-c4="" target="_blank" href="http://hbrc.edu.eg/"><img  _ngcontent-vhn-c4="" class="img-fluid"
+                    src="./EDGE APP Energy 0_files/footer-logo.png" style="user-select:none ;" /></a>
+              </div>
+              <div _ngcontent-vhn-c4="" class="col">
+                <div _ngcontent-vhn-c4=""
+                  class="d-flex justify-content-end flex-grow-1 align-items-center mobileFtrSocial">
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </app-footer>
+          <!-- particles.js container -->
+     
+      <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
+      <script>
+              particlesJS("particles-js", { "particles": { "number": { "value": 80, "density": { "enable": true, "value_area": 800 } }, 
+              "color": { "value": "#000000" }, 
+              "shape": { "type": "circle", "stroke": { "width": 0, "color": "#ffffff" }, "polygon": { "nb_sides": 5 }, "image": { "src": "img/github.svg", "width": 50, "height": 50 } }, 
+              "opacity": { "value": 0.5, "random": false, "anim": { "enable": false, "speed": 1, "opacity_min": 0.1, "sync": false } }, 
+              "size": { "value": 3, "random": true, "anim": { "enable": true, "speed": 60, "size_min": 0.1, "sync": false } }, 
+              "line_linked": { "enable": true, "distance": 150, "color": "#000000", "opacity": 0.4, "width": 1 },
+              "move": { "enable": true, "speed": 6, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false, "attract": { "enable": false, "rotateX": 600, "rotateY": 1200 } } }, "interactivity": { "detect_on": "canvas", "events": { "onhover": { "enable": true, "mode": "repulse" }, "onclick": { "enable": true, "mode": "push" }, "resize": true }, "modes": { "grab": { "distance": 400, "line_linked": { "opacity": 1 } }, "bubble": { "distance": 400, "size": 40, "duration": 2, "opacity": 8, "speed": 3 }, "repulse": { "distance": 200, "duration": 0.4 }, "push": { "particles_nb": 4 }, "remove": { "particles_nb": 2 } } }, "retina_detect": true }); var count_particles, stats, update; stats = new Stats; stats.setMode(0); stats.domElement.style.position = 'absolute'; stats.domElement.style.left = '0px'; stats.domElement.style.top = '0px'; document.body.appendChild(stats.domElement); 
+              count_particles = document.querySelector('.js-count-particles'); update = function () { stats.begin(); stats.end(); if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) { count_particles.innerText = window.pJSDom[0].pJS.particles.array.length; } requestAnimationFrame(update); }; requestAnimationFrame(update);;
+      </script>
+
+</body>
+</html>
